@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educational Website UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#334155;
+}
+
+/* Header */
+header{
+    background:#2563eb;
+    color:#fff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* Features */
+.features{
+    padding:70px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#1e293b;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.feature-card h3{
+    margin:15px 0;
+}
+
+/* Courses */
+.courses{
+    padding:20px 8% 70px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.course-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.course-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:20px;
+}
+
+.course-content h3{
+    margin-bottom:10px;
+}
+
+.course-content p{
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.enroll-btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+}
+
+/* Statistics */
+.stats{
+    background:#1e293b;
+    color:white;
+    padding:60px 8%;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:36px;
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .feature-grid,
+    .course-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .feature-grid,
+    .course-grid,
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">EduLearn</div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Teachers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Learn New Skills Online</h1>
+    <p>
+        Join thousands of students and access high-quality
+        courses from expert instructors anytime, anywhere.
+    </p>
+    <a href="#" class="btn">Explore Courses</a>
+</section>
+
+<section class="features">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>📚 Expert Courses</h3>
+            <p>Industry-focused learning materials.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🎓 Certified Programs</h3>
+            <p>Receive certificates after completion.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💻 Online Learning</h3>
+            <p>Study anytime from any device.</p>
+        </div>
+    </div>
+</section>
+
+<section class="courses">
+    <h2 class="section-title">Popular Courses</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <img src="https://via.placeholder.com/400x200" alt="Course">
+            <div class="course-content">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, JavaScript, and modern frameworks.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="https://via.placeholder.com/400x200" alt="Course">
+            <div class="course-content">
+                <h3>Data Science</h3>
+                <p>Master data analysis and machine learning concepts.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="https://via.placeholder.com/400x200" alt="Course">
+            <div class="course-content">
+                <h3>UI/UX Design</h3>
+                <p>Create engaging and user-friendly digital products.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h2>10K+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="stat">
+            <h2>250+</h2>
+            <p>Courses</p>
+        </div>
+
+        <div class="stat">
+            <h2>100+</h2>
+            <p>Instructors</p>
+        </div>
+
+        <div class="stat">
+            <h2>95%</h2>
+            <p>Success Rate</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 EduLearn. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

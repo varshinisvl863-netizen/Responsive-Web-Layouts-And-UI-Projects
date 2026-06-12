@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+}
+
+.checkout-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    margin-bottom:25px;
+    color:#1e293b;
+}
+
+/* Layout */
+.checkout-layout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+/* Form Section */
+.checkout-form{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.section-title{
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group.full{
+    grid-column:span 2;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:#2563eb;
+}
+
+/* Order Summary */
+.order-summary{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    height:fit-content;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    color:#475569;
+}
+
+.total{
+    border-top:1px solid #e2e8f0;
+    padding-top:15px;
+    font-size:20px;
+    font-weight:bold;
+    color:#1e293b;
+}
+
+.place-order{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.place-order:hover{
+    background:#1d4ed8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .checkout-layout{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:span 1;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="checkout-container">
+
+    <h1>Checkout</h1>
+
+    <div class="checkout-layout">
+
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+
+            <h2 class="section-title">Billing Details</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="John">
+                </div>
+
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Doe">
+                </div>
+
+                <div class="form-group full">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group full">
+                    <label>Street Address</label>
+                    <input type="text" placeholder="123 Main Street">
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="New York">
+                </div>
+
+                <div class="form-group">
+                    <label>ZIP Code</label>
+                    <input type="text" placeholder="10001">
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <select>
+                        <option>Select Country</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="+91 9876543210">
+                </div>
+
+            </div>
+
+            <h2 class="section-title" style="margin-top:25px;">
+                Payment Information
+            </h2>
+
+            <div class="form-grid">
+
+                <div class="form-group full">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY">
+                </div>
+
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="password" placeholder="123">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+
+            <h2 class="section-title">Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Wireless Headphones</span>
+                <span>$99</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Smart Watch</span>
+                <span>$149</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>$15</span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>$263</span>
+            </div>
+
+            <button class="place-order">
+                Place Order
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
